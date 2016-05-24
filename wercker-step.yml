@@ -1,4 +1,4 @@
-name: gh-pages
+name: step-gh-pages
 version: 0.2.1
 description: deploy to github pages
 keywords:
