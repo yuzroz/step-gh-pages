@@ -8,6 +8,7 @@ A [wercker](http://wercker.com/) step to deploy to [Github Pages](http://pages.g
 - `basedir` *optional* Set this if your build step outputs to a folder
 - `domain` *optional* Custom domain ([documentation](https://help.github.com/articles/setting-up-a-custom-domain-with-pages))
 - `repo` *optional* Set this to a github repo like "user/repo". Defaults to your build repo
+- `message` *optional* Custom commit message
 
 ## Example
 
@@ -19,3 +20,4 @@ Check out [lvivier/luke.vivier.ca](https://github.com/lvivier/luke.vivier.ca) on
             token: $GIT_TOKEN
             domain: luke.vivier.ca
             basedir: build
+            message: commit-message
