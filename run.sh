@@ -52,7 +52,13 @@ git config user.email "pleasemailus@wercker.com"
 git config user.name "werckerbot"
 
 git add .
-git commit -m "deploy from $WERCKER_STARTED_BY"
+if [ ! -n "$WERCKER_GH_PAGES_MESSAGE" ]
+then
+  git commit -m "$WERCKER_GH_PAGES_MESSAGE"
+else
+  git commit -m "deploy from $WERCKER_STARTED_BY"
+fi
+
 result="$(git push -f $remote master:$branch)"
 
 if [[ $? -ne 0 ]]
