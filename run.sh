@@ -52,8 +52,12 @@ git config user.email "pleasemailus@wercker.com"
 git config user.name "werckerbot"
 
 git add .
-if [ -n $WERCKER_GH_PAGES_MESSAGE ]
+
+info "using message \"$WERCKER_GH_PAGES_MESSAGE\":\"$WERCKER_GIT_OWNER\""
+
+if [ -n "$WERCKER_GH_PAGES_MESSAGE" ]
 then
+  info "test"
   git commit -m "$WERCKER_GH_PAGES_MESSAGE"
 else
   git commit -m "deploy from $WERCKER_GIT_OWNER"
