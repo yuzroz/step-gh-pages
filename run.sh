@@ -67,6 +67,7 @@ then
   warning "$result"
   fail "failed pushing to github pages"
 else
+  rm -rf ../$WERCKER_GH_PAGES_BASEDIR/*
   success "pushed to github pages"
 fi
 
